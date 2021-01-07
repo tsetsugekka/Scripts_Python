@@ -1,3 +1,5 @@
+from twilio.rest import Client
+
 #SMSで完了をお知らせ 
 # Your Account SID from twilio.com/console 
 account_sid = "################" 
