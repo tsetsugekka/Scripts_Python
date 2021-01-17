@@ -16,3 +16,27 @@ message = client.messages.create(
     body="スクレピング完了しました。"+filename+"を確認ください。") 
  
 print(message.sid) 
+
+
+
+from twilio.rest import Client
+def twilio_announce(account_sid,auth_token,from_phone,to_phone,filename="ファイル"):
+    '''
+    SMSで完了をお知らせ
+    
+    account_sid=Your Account SID from twilio.com/console
+    auth_token=Your Auth Token from twilio.com/console
+    '''
+    client = Client(account_sid, auth_token)
+    message = client.messages.create(
+        to=to_phone, 
+        from_=from_phone,
+        body="スクレピング完了しました。"+filename+"を確認ください。")
+    return print(message.sid)
+   
+   #twilio_announce
+twilio_account_sid= "#######"
+twilio_auth_token= "######"
+twiilio_to="+8170####53"
+twiilio_from="+1609#####1"
+twilio_announce(twilio_account_sid,twilio_auth_token,twiilio_from,twiilio_to)
