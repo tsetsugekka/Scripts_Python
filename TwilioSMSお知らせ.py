@@ -19,24 +19,34 @@ print(message.sid)
 
 
 
-from twilio.rest import Client
-def twilio_announce(account_sid,auth_token,from_phone,to_phone,filename="ファイル"):
-    '''
-    SMSで完了をお知らせ
-    
-    account_sid=Your Account SID from twilio.com/console
-    auth_token=Your Auth Token from twilio.com/console
-    '''
-    client = Client(account_sid, auth_token)
-    message = client.messages.create(
-        to=to_phone, 
-        from_=from_phone,
-        body="スクレピング完了しました。"+filename+"を確認ください。")
+from twilio.rest import Client 
+def twilio_announce(account_sid, 
+                    auth_token, 
+                    from_phone, 
+                    to_phone, 
+                    filename="ファイル"): 
+    ''' 
+    SMSで完了をお知らせ 
+     
+    account_sid=Your Account SID from twilio.com/console 
+    auth_token=Your Auth Token from twilio.com/console 
+    ''' 
+    client = Client(account_sid, auth_token) 
+    message = client.messages.create( 
+        to=to_phone,  
+        from_=from_phone, 
+        body="スクレピング完了しました。"+filename+"を確認ください。") 
     return print(message.sid)
-   
-   #twilio_announce
-twilio_account_sid= "#######"
-twilio_auth_token= "######"
-twiilio_to="+8170####53"
-twiilio_from="+1609#####1"
-twilio_announce(twilio_account_sid,twilio_auth_token,twiilio_from,twiilio_to)
+    
+#twilio_announce 
+#SMSで完了をお知らせ 
+#twilio_announce 
+#SMSで完了をお知らせ 
+twilio_account_sid= "AC57a73bad8f4aa7bf6d5d9911c8e4caf2" 
+twilio_auth_token= "91823e4008d5288ee3e62d45cfc72b74" 
+twiilio_to="+817041434753" 
+twiilio_from="+16096148121" 
+twilio_announce(twilio_account_sid, 
+                twilio_auth_token, 
+                twiilio_from, 
+                twiilio_to)
