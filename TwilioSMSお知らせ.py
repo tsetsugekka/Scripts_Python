@@ -42,10 +42,10 @@ def twilio_announce(account_sid,
 #SMSで完了をお知らせ 
 #twilio_announce 
 #SMSで完了をお知らせ 
-twilio_account_sid= "AC57a73bad8f4aa7bf6d5d9911c8e4caf2" 
-twilio_auth_token= "91823e4008d5288ee3e62d45cfc72b74" 
-twiilio_to="+817041434753" 
-twiilio_from="+16096148121" 
+twilio_account_sid= "AC57a7######6d5d9911c8e4caf2" 
+twilio_auth_token= "91823e#####e3e62d45cfc72b74" 
+twiilio_to="+8170#####4753" 
+twiilio_from="+16#####121" 
 twilio_announce(twilio_account_sid, 
                 twilio_auth_token, 
                 twiilio_from, 
