@@ -6,7 +6,7 @@ for index,row in df.iterrows():
     #打印进度
     #A：逢10打印
     if (index+1)%10==0:
-        print("\r"+datetime.datetime.now().isoformat(timespec='minutes')+"　　"+str(index+1)+"件目実行開始　　　　　　　　")
+        print("\r"+datetime.datetime.now().isoformat(timespec='minutes')+"　　"+str(index+1)+"件目実行開始　　　　　　　　", end="")
     
     #B：全部打印
     #考虑到index存在不从0开始且筛选后不连续的情况，
