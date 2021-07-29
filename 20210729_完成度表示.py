@@ -1,6 +1,7 @@
 import datetime
 
 printnum=0
+maxnum=len(df)
 for index,row in df.iterrows():
     #打印进度
     #A：逢10打印
@@ -11,5 +12,5 @@ for index,row in df.iterrows():
     #考虑到index存在不从0开始且筛选后不连续的情况，
     #所以计算完成度时使用index而使用printnum
     printnum=printnum+1
-    print("\r"+datetime.datetime.now().isoformat(timespec='minutes')+"　　"+str(index+1)+"件目実行開始（完成度："+str(round(printnum/len(df)*100,2))+"%）　　　　　　　　", end="")
+    print("\r"+datetime.datetime.now().isoformat(timespec='minutes')+"　　"+str(index+1)+"件目実行開始（完成度："+str(round(printnum/maxnum*100,2))+"%）　　　　　　　　", end="")
    
